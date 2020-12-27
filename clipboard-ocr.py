@@ -1,5 +1,4 @@
 import io
-import pyperclip
 from google.cloud import vision
 from google.cloud.vision_v1 import types
 from PIL import ImageGrab, Image
@@ -32,5 +31,3 @@ texts = response.text_annotations
 if texts:
     description = texts[0].description
     print(description)
-    # coping recognized text back to clipboard
-    pyperclip.copy(description)
